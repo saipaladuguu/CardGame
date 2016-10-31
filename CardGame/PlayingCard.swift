@@ -38,11 +38,18 @@ class PlayingCard : Card
     
     override init()
     {
-        suit = ""
-        color = UIColor()
         super.init()
-        rank = 0;
-
+        suit = String()
+        color = UIColor.redColor()
+        rank = 0
+    }
+    
+    init(withRank: Int, ofSuit:String)
+    {
+        super.init();
+        color = UIColor.redColor()
+        suit = ofSuit
+        rank = withRank
     }
     
     func getRank() -> Int
