@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		148AEE8F1DC27DD6009A93AF /* CardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148AEE8E1DC27DD6009A93AF /* CardGameController.swift */; };
+		14B6664B1DC7C4ED00902B42 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6664A1DC7C4ED00902B42 /* Deck.swift */; };
+		14B6664D1DC7C50300902B42 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6664C1DC7C50300902B42 /* PlayingCardDeck.swift */; };
 		14F6E83E1DBFE41E00151F1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F6E83D1DBFE41E00151F1D /* AppDelegate.swift */; };
 		14F6E8431DBFE41E00151F1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F6E8411DBFE41E00151F1D /* Main.storyboard */; };
 		14F6E8451DBFE41E00151F1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F6E8441DBFE41E00151F1D /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		148AEE8E1DC27DD6009A93AF /* CardGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardGameController.swift; path = "untitled folder/CardGameController.swift"; sourceTree = "<group>"; };
+		14B6664A1DC7C4ED00902B42 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		14B6664C1DC7C50300902B42 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		14F6E83A1DBFE41E00151F1D /* CardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F6E83D1DBFE41E00151F1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F6E8421DBFE41E00151F1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			children = (
 				14F6E84F1DBFE5D100151F1D /* Card.swift */,
 				14F6E8511DBFE65100151F1D /* PlayingCard.swift */,
+				14B6664A1DC7C4ED00902B42 /* Deck.swift */,
+				14B6664C1DC7C50300902B42 /* PlayingCardDeck.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 			files = (
 				14F6E8501DBFE5D100151F1D /* Card.swift in Sources */,
 				14F6E8521DBFE65100151F1D /* PlayingCard.swift in Sources */,
+				14B6664B1DC7C4ED00902B42 /* Deck.swift in Sources */,
+				14B6664D1DC7C50300902B42 /* PlayingCardDeck.swift in Sources */,
 				14F6E83E1DBFE41E00151F1D /* AppDelegate.swift in Sources */,
 				148AEE8F1DC27DD6009A93AF /* CardGameController.swift in Sources */,
 			);
