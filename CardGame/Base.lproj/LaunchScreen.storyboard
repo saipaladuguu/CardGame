@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Card Game Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" customClass="CardGameController" customModule="CardGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -17,20 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcn-0h-PDp">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcn-0h-PDp">
                                 <rect key="frame" x="125" y="94" width="385" height="400"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                 <state key="normal" title="Words " backgroundImage="John-Cena-Smiling-PNG">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cardClick:" destination="01J-lp-oVM" eventType="touchUpInside" id="BmM-jq-BQ9"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHG-q1-XIu">
+                                <rect key="frame" x="125" y="65" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZHG-q1-XIu" firstAttribute="width" secondItem="dcn-0h-PDp" secondAttribute="width" id="3dx-8N-BVc"/>
+                            <constraint firstItem="dcn-0h-PDp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GAJ-bQ-uhr"/>
+                            <constraint firstItem="ZHG-q1-XIu" firstAttribute="leading" secondItem="dcn-0h-PDp" secondAttribute="leading" id="TUf-xy-Ry2"/>
+                            <constraint firstItem="dcn-0h-PDp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wNm-h4-4P0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardButton" destination="dcn-0h-PDp" id="eJP-Ad-Wv6"/>
+                        <outlet property="label" destination="ZHG-q1-XIu" id="SKT-W8-5Ay"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="372"/>
+            <point key="canvasLocation" x="446" y="379"/>
         </scene>
     </scenes>
     <resources>

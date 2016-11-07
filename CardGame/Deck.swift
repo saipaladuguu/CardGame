@@ -23,9 +23,15 @@ class Deck
     }
     func drawCard() -> Card!
     {
-        return nil
+        if cards.count > 0
+        {
+            return cards.removeAtIndex(0)
+        }
+        else
+        {
+         return nil
+        }
     }
-    
     func drawRandomCard() -> Card!
     {
         return nil
