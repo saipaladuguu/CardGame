@@ -20,21 +20,14 @@ class PlayingCardDeck : Deck
         {
             for var rank = 1; rank <= PlayingCard.maxRank(); rank += 1
             {
-//                let tempCard = PlayingCard()
-//                tempCard.rank = rank
-//                tempCard.suit = suit
-            let tempCard = PlayingCard(withRank: rank, ofSuit: suit)
+                let tempCard = PlayingCard()
+                tempCard.rank = rank
+                tempCard.suit = suit
                 cards.append(tempCard)
             }
         }
         
     }
-    
-    func shuffleDeck() -> Void
-    {
-        
-    }
-    
     func orderDeck() -> Void
     {
         

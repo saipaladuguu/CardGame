@@ -12,63 +12,31 @@ class PlayingCard : Card
 {
     //Private var rank: int
     internal var suit : String
-    {
-    get
-        {
-            return self.suit
-        }
-    set(suit)
-        {
-            self.suit = suit
-        }
-    }
     internal var color : UIColor
-    
     internal var rank : Int
-    {
-        get
-        {
-            return self.rank
-        }
-        set(rank)
-        {
-            self.rank = rank
-        }
-    }
+
     
     override init()
     {
-        super.init()
         suit = String()
         color = UIColor.redColor()
         rank = 0
+        super.init()
     }
     
     init(withRank: Int, ofSuit:String)
     {
-        super.init();
+        
         color = UIColor.redColor()
         suit = ofSuit
         rank = withRank
+        super.init()
     }
     
-    func getRank() -> Int
-    {
-        return rank
-    }
-    
-    func getSuit() -> String
-    {
-        return suit
-    }
-    
-    func getColor() -> UIColor
-    {
-        return color
-    }
     override func toString() -> String
     {
         let backStatus : String
+        
         if self.isFacing()
         {
             backStatus = "is face up"
@@ -77,7 +45,7 @@ class PlayingCard : Card
         {
             backStatus = "is face down"
         }
-        let description = " The card rank is: \(rank) and its suit is \(suit). It has a color of \(color)"
+        let description = " The card rank is: \(rank) and its suit is \(suit). It has a color of \(color) and \(backStatus)"
         
         return description
     }
@@ -100,4 +68,9 @@ class PlayingCard : Card
     {
         return ["♠️","♦️","♥️","♣️"]
     }
+    func getCardData() -> String
+    {
+        return "\(PlayingCard.validRanks() [rank]) \(suit)"
+    }
+
 }
