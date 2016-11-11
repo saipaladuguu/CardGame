@@ -25,7 +25,7 @@ class CardGameController : UIViewController
     @IBAction func cardClick(sender: UIButton)
     {
         clickCount += 1
-        let content = "You Clicked \(clickCount)times"
+        let content = "You Clicked \(clickCount) times"
         
         if let currentCard = cardDeck.drawRandomCard() as? PlayingCard
         {
