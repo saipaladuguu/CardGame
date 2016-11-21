@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1463B2631DD65772009B40D6 /* stupid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463B2621DD65772009B40D6 /* stupid.swift */; };
 		148AEE8F1DC27DD6009A93AF /* CardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148AEE8E1DC27DD6009A93AF /* CardGameController.swift */; };
+		14B65B6D1DE38D6F0092C199 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B65B6C1DE38D6F0092C199 /* CardView.swift */; };
 		14B6664B1DC7C4ED00902B42 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6664A1DC7C4ED00902B42 /* Deck.swift */; };
 		14B6664D1DC7C50300902B42 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6664C1DC7C50300902B42 /* PlayingCardDeck.swift */; };
 		14F6E83E1DBFE41E00151F1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F6E83D1DBFE41E00151F1D /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		1463B2621DD65772009B40D6 /* stupid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stupid.swift; sourceTree = "<group>"; };
 		148AEE8E1DC27DD6009A93AF /* CardGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardGameController.swift; path = "untitled folder/CardGameController.swift"; sourceTree = "<group>"; };
+		14B65B6C1DE38D6F0092C199 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "untitled folder 2/CardView.swift"; sourceTree = "<group>"; };
 		14B6664A1DC7C4ED00902B42 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		14B6664C1DC7C50300902B42 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		14F6E83A1DBFE41E00151F1D /* CardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				14F6E84F1DBFE5D100151F1D /* Card.swift */,
+				14B65B6C1DE38D6F0092C199 /* CardView.swift */,
 				14F6E8511DBFE65100151F1D /* PlayingCard.swift */,
 				14B6664A1DC7C4ED00902B42 /* Deck.swift */,
 				14B6664C1DC7C50300902B42 /* PlayingCardDeck.swift */,
@@ -172,6 +175,7 @@
 				14B6664B1DC7C4ED00902B42 /* Deck.swift in Sources */,
 				14B6664D1DC7C50300902B42 /* PlayingCardDeck.swift in Sources */,
 				14F6E83E1DBFE41E00151F1D /* AppDelegate.swift in Sources */,
+				14B65B6D1DE38D6F0092C199 /* CardView.swift in Sources */,
 				148AEE8F1DC27DD6009A93AF /* CardGameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
