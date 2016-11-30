@@ -25,7 +25,7 @@ import UIKit
         bottomLabel = UILabel()
         topLabel = UILabel()
         cornerCurve = CGFloat()
-        super.init(frame: CGRect(x:0,y:0mwidth:400, height:800).)
+        super.init(frame: CGRect(x:0,y:0,width:400, height:800))
     }
     
     required init?(coder acoder:NSCoder)
