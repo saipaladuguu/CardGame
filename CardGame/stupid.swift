@@ -79,11 +79,7 @@ class StupidGame
     
     func playMatchGame() -> Void
     {
-        for(var cardsLeft = 0; cardsLeft < drawingDeck.count; cardsLeft += 1)
-        {
-            
-        }
-        checkMatch()
+
         score += checkMatch()
         hand.removeAll()
         
