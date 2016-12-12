@@ -5,84 +5,73 @@
 //  Copyright © 2016 Paladugu, Sai neeraj. All rights reserved.
 //
 
-import UIKit
 import Foundation
 
 class StupidGame
 {
-    
-    //Declaration Section
-    internal var score : Int
-    internal var discardPile : Int
-    internal var winnerPile : Int
+    //Declarations
+    internal var cardDeck : PlayingCardDeck
     internal var hand : [PlayingCard]
-    internal var drawingPile : Int
-    internal var drawingDeck : PlayingCardDeck
+    internal var score : Int
     
     
-    
-    //inits
+    //Inits
     init()
     {
-        self.score = 0
-        self.discardPile = Int()
-        self.winnerPile = Int()
-        self.hand = [PlayingCard]()
-        self.drawingPile = Int()
-        self.drawingDeck = PlayingCardDeck()
+        cardDeck = PlayingCardDeck()
+        hand = [PlayingCard]()
+        score = Int(0)
     }
     
     //Methods
     func startGame() -> Void
     {
-        drawingDeck.shuffleDeck()
+        cardDeck.shuffleDeck()
         drawCards()
     }
     
-    func drawCards() -> Void
+    
+    //Method to Draw a Card from the Deck
+    fileprivate func drawCards() -> Void
     {
-        hand.append((drawingDeck.drawCard() as? PlayingCard)!)
-        hand.append((drawingDeck.drawCard() as? PlayingCard)!)
-        hand.append((drawingDeck.drawCard() as? PlayingCard)!)
-        hand.append((drawingDeck.drawCard() as? PlayingCard)!)
-        hand.append((drawingDeck.drawCard() as? PlayingCard)!)
-        hand.append((drawingDeck.drawCard() as? PlayingCard)!)
-        hand.append((drawingDeck.drawCard() as? PlayingCard)!)
+        hand.append((cardDeck.drawCard() as? PlayingCard)!)
+        hand.append((cardDeck.drawCard() as? PlayingCard)!)
     }
     
-    func checkMatch() -> Int
+    //Checks to see if Cards match
+    func checkMatch() -> Bool
     {
-        var points = Int()
-        
-        for(var OuterLoop = 0; OuterLoop < hand.count; OuterLoop += 1)
+        let hasMatch : Bool
+        if(hand[0].rank == hand[1].rank) || (hand[0].suit == hand[1].suit)
         {
-            let handSize = hand.count
-            for(var InnerLoop = 0; InnerLoop < hand.count; InnerLoop += 1)
+            hasMatch = true
+        }
+        else
+        {
+            hasMatch = false
+        }
+        
+        return hasMatch
+        
+    }
+    
+    //Checks the drawn cards to detect a match
+    //If checkMatch() returns true, score increases
+    //Cards then removed and drawCards() is called
+    func playGame() -> Void
+    {
+        if cardDeck.cards.count > 0
+        {
+            if checkMatch()
             {
-                if(OuterLoop != InnerLoop && hand[OuterLoop].rank == hand[InnerLoop].rank)
-                {
-                    hand.removeAtIndex(InnerLoop)
-                    points += 2
-                    InnerLoop -= 1
-                }
+                score += 5
             }
-            if(handSize != hand.count)
+            else
             {
-                hand.removeAtIndex(OuterLoop)
-                points += 2
-                OuterLoop -= 1
+                score -= 2
             }
         }
-        let negativePoints = hand.count
-        return points - negativePoints
-    }
-    
-    func playMatchGame() -> Void
-    {
-
-        score += checkMatch()
         hand.removeAll()
-        
+        drawCards()
     }
 }
-
